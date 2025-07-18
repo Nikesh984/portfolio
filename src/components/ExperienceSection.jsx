@@ -38,7 +38,7 @@ const ExperienceSection = ({ id, title, experiences }) => {
                   <p className="text-gray-400 text-sm">{exp.date}</p>
                   <ul className="text-gray-300 mt-2 space-y-1">
                     {exp.responsibilities.map((resp, i) => (
-                      <li key={i} className="flex items-center">
+                      <li key={i} className="flex">
                         <span className="mr-2 text-green-400">•</span>
                         {resp}
                       </li>

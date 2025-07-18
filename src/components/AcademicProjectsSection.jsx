@@ -31,6 +31,7 @@ const AcademicProjectsSection = ({ id, title, projects }) => {
                   <IconComponent
                     className="mr-2 text-cyan-400 inline-block"
                     size={20}
+                    href={project.githubLink}
                   />
                   <h3 className="text-xl font-semibold text-cyan-400 inline-block">
                     {project.title}

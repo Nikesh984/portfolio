@@ -18,9 +18,7 @@ const AchievementsSection = ({ id, title, achievements }) => {
                   {achievement.title}
                 </h3>
               </div>
-              <p className="text-gray-300 text-lg mb-2">
-                {achievement.description}
-              </p>
+              <p className="text-gray-300 mb-2">{achievement.description}</p>
               <p className="text-gray-400 text-sm">{achievement.date}</p>
             </div>
           ))}

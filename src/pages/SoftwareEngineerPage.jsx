@@ -43,22 +43,26 @@ const SoftwareEngineerPage = ({ onBack }) => {
       id: 1,
       title: "Software Engineer",
       company: "Micron Technology",
-      date: "2022 - Present",
+      date: "May, 2023 - Aug, 2023",
       responsibilities: [
-        "Developed IAM solutions to secure enterprise access.",
-        "Maintained internal applications with scalable systems.",
-        "Collaborated on secure engineering practices.",
+        "Led the migration of 50,000 users from Cisco Duo to Azure AD MFA, defining requirements, policies, enforced Zero-Trust security resulting in an annual cost savings of $800k.",
+
+        "Developed APIs using C# ASP.NET Core and SQL Server for an automated endpoint health remediation tool, reducing time-to-resolution by 70%.",
+
+        "Architected and deployed web applications using ASP.NET Core Web API (backend) and React.js (frontend),creating, Group Flattening, and Health Check applications.",
       ],
     },
     {
       id: 2,
       title: "Associate Software Engineer",
       company: "Micron Technology",
-      date: "2020 - 2022",
+      date: "Feb, 2022 - May, 2023",
       responsibilities: [
-        "Gained hands-on experience with .NET development.",
-        "Transitioned into a full-time software engineering role.",
-        "Worked on internship projects enhancing technical skills.",
+        "Developed and implemented automated unit and integration testing for .NET applications, improving code coverage by 85% and reducing post-deployment defects by 70%.",
+
+        "Enabled SSO for 30+ SaaS products using SAML, OIDC, and OAuth2.0, improving authentication and authorization efficiency by 80%.",
+
+        "Built Power BI dashboards for Identity Lifecycle Management (LCM), tracking leavers, movers, joiners, and service accounts to provide actionable insights.",
       ],
     },
 
@@ -66,11 +70,13 @@ const SoftwareEngineerPage = ({ onBack }) => {
       id: 3,
       title: "Programmer Analyst",
       company: "Cognizant",
-      date: "2020 - 2022",
+      date: "Oct, 2020 - Feb, 2022",
       responsibilities: [
-        "Gained hands-on experience with .NET development.",
-        "Transitioned into a full-time software engineering role.",
-        "Worked on internship projects enhancing technical skills.",
+        "Engineered ASP.NET Web API applications and PL/SQL integrations for seamless data sharing across three enterprise systems, enhancing data integrity, ensuring reliable access to 1M+ records daily.",
+
+        "Contributed to a cloud-based automation system using Python, and Serverless Computing, reducing manual processing by 60+ hours per week.",
+
+        "Led 24/7 on-call support for critical business applications, resolving 95% of high-priority incidents within SLA.",
       ],
     },
   ];
@@ -78,19 +84,31 @@ const SoftwareEngineerPage = ({ onBack }) => {
   const projects = [
     {
       id: 1,
-      title: "Student Management System",
-      type: "coding",
-      description: "A web application to manage student records and grades.",
-      date: "2019",
-      technologies: ["JavaScript", "HTML", "CSS", "Node.js"],
+      title: "Network Structures and Cloud Computing ",
+      type: "Cloud Computing",
+      description:
+        "A scalable cloud infrastructure on Google Cloud using Terraform, planned, developed and deployed for the CSYE Network Structures and Cloud Computing course. Integrates Compute Engine, Cloud SQL, and Cloud Pub/Sub for a secure, high-availability of web application with automated deployments and robust monitoring.",
+      date: "2024",
+      technologies: [
+        "Google Cloud",
+        "Terraform",
+        "Packer",
+        "REST API's",
+        "Shell Scripting",
+        "GitHub Actions",
+        "CI/CD",
+      ],
+      githubLink: "https://github.com/Nikesh984/scalable-cloudinfra-gcp",
     },
     {
       id: 2,
-      title: "Database Optimization Project",
-      type: "database",
-      description: "Optimized SQL queries for a university database.",
-      date: "2018",
-      technologies: ["MySQL", "Python", "SQL"],
+      title: "Advanced Big Data App-Indexing",
+      type: "coding",
+      description:
+        "An advanced big data application designed to index and manage structured JSON data. Built with a RESTful API backed by Redis for fast data access, Elasticsearch for efficient search, RabbitMQ for async processing, and secured with OAuth2.0 for robust access control and data integrity.",
+      date: "2025",
+      technologies: ["dotnet", "Kafka", "Elastic Search", "Kibana"],
+      githubLink: "https://github.com/Nikesh984/INFO7255_RESTAPI",
     },
   ];
 
@@ -101,6 +119,7 @@ const SoftwareEngineerPage = ({ onBack }) => {
       institution: "Northeastern University",
       date: "2023 - 2025",
       highlights: [
+        "Worked as a Teaching Assistant for a core course (INFO 5100) of Information Systems program led by Professor & Director Kal Bugrara.",
         // "Graduated with Honors",
         // "Completed coursework in structural analysis",
         // "Participated in engineering design projects",
@@ -122,16 +141,17 @@ const SoftwareEngineerPage = ({ onBack }) => {
   const achievements = [
     {
       id: 1,
-      title: "Best Project Award",
-      description: "Received for the Student Management System project.",
-      date: "2019",
+      title: "Cultural Champion",
+      description:
+        "Received the Cultural Champion Award at Micron Technology for leading the Azure AD MFA migration project, demonstrating innovation, collaboration, and alignment with the company’s core values. Recognized by senior leadership, including the CEO.",
+      date: "2023",
     },
     {
       id: 2,
       title: "Engineering Excellence Award",
       description:
-        "Recognized for innovative database optimization techniques.",
-      date: "2018",
+        "Recognized with the Engineering Excellence Award by Novartis while working at Cognizant Technology Solutions, for outstanding contribution and commitment to delivering high-quality solutions.",
+      date: "2021",
     },
   ];
 
