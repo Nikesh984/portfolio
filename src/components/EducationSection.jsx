@@ -7,7 +7,7 @@ const EducationSection = ({ id, title, education }) => {
         <h2 className="text-2xl font-bold text-cyan-500 mb-8">{title}</h2>
         <div className="w-full">
           {education.map((edu, index) => {
-            const logoSrc = `/icons/${edu.institution
+            const logoSrc = `${process.env.PUBLIC_URL}/icons/${edu.institution
               .toLowerCase()
               .replace(/\s/g, "-")}.png`;
             return (

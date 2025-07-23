@@ -9,7 +9,10 @@ const ExperienceSection = ({ id, title, experiences }) => {
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-cyan-400"></div>
           {experiences.map((exp, index) => {
             const isLeft = index % 2 !== 0;
-            const logoSrc = `/icons/${exp.company
+            // const logoSrc = `/icons/${exp.company
+            //   .toLowerCase()
+            //   .replace(/\s/g, "-")}.png`;
+            const logoSrc = `${process.env.PUBLIC_URL}/icons/${exp.company
               .toLowerCase()
               .replace(/\s/g, "-")}.png`;
             return (
