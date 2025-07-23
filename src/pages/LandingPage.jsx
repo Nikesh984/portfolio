@@ -5,7 +5,6 @@ import IconTransitionAnimation from "../components/IconTransitionAnimation";
 import softwareEngineerImage from "../assets/1005142.png";
 import iamEngineerImage from "../assets/iam-engineer.png";
 import { VisualStudioTeamServices, Azure } from "azure-react-icons";
-import ProfileCard from "../components/profilecard/ProfileCard";
 
 const LandingPage = ({ onSelectProfile }) => {
   const [showAnimation, setShowAnimation] = useState(false);

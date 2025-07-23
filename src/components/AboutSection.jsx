@@ -67,10 +67,11 @@ const AboutSection = ({ id, title, description, techIcons }) => {
           >
             {techIcons.map((tech, index) => {
               const iconFile = iconMap[tech.toLowerCase()] || "default.png"; // Fallback if no match
+              const iconSrc = `${process.env.PUBLIC_URL}/icons/${iconFile}`;
               return (
                 <img
                   key={index}
-                  src={`/icons/${iconFile}`}
+                  src={iconSrc}
                   alt={`${tech} icon`}
                   className="absolute max-w-[100px] max-h-[100px] transition-opacity duration-700"
                   style={{ opacity: 0 }}
