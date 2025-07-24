@@ -43,7 +43,7 @@ const SoftwareEngineerPage = ({ onBack }) => {
       id: 1,
       title: "Software Engineer",
       company: "Micron Technology",
-      date: "May, 2023 - Aug, 2023",
+      date: "May 2023 - Aug 2023",
       responsibilities: [
         "Led the migration of 50,000 users from Cisco Duo to Azure AD MFA, defining requirements, policies, enforced Zero-Trust security resulting in an annual cost savings of $800k.",
 
@@ -56,7 +56,7 @@ const SoftwareEngineerPage = ({ onBack }) => {
       id: 2,
       title: "Associate Software Engineer",
       company: "Micron Technology",
-      date: "Feb, 2022 - May, 2023",
+      date: "Feb 2022 - May 2023",
       responsibilities: [
         "Developed and implemented automated unit and integration testing for .NET applications, improving code coverage by 85% and reducing post-deployment defects by 70%.",
 
@@ -70,7 +70,7 @@ const SoftwareEngineerPage = ({ onBack }) => {
       id: 3,
       title: "Programmer Analyst",
       company: "Cognizant",
-      date: "Oct, 2020 - Feb, 2022",
+      date: "Oct 2020 - Feb 2022",
       responsibilities: [
         "Engineered ASP.NET Web API applications and PL/SQL integrations for seamless data sharing across three enterprise systems, enhancing data integrity, ensuring reliable access to 1M+ records daily.",
 
@@ -220,7 +220,9 @@ const SoftwareEngineerPage = ({ onBack }) => {
             "sql",
             "mongo",
             "cosmos",
+            "terraform",
             "powershell",
+            "bash",
             "postman",
             "swagger",
           ]} // Updated to match iconMap

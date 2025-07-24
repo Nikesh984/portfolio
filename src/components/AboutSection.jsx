@@ -14,6 +14,17 @@ const AboutSection = ({ id, title, description, techIcons }) => {
     powershell: "powershell.png",
     postman: "postman.png",
     swagger: "swagger.png",
+    azure: "Azure.png",
+    sailpoint: "sailpoint.png",
+    sailpoint1: "sailpoint1.png",
+    vault: "HashiCorpVault.png",
+    terraform: "HashiCorpTerraform.png",
+    githubActions: "githubActions.png",
+    aws: "AWS.png",
+    gcloud: "GoogleCloud.png",
+    okta: "Okta.png",
+    bash: "Bash.png",
+    beyondTrust: "beyondtrust.png",
   };
 
   const iconContainerRef = useRef(null);

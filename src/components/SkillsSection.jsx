@@ -1,6 +1,15 @@
 import React from "react";
 import { FaCheck, FaCircle, FaDotCircle } from "react-icons/fa";
-import { FaCode, FaCloud, FaDatabase, FaTools } from "react-icons/fa";
+import {
+  FaCode,
+  FaCloud,
+  FaDatabase,
+  FaTools,
+  FaLock,
+  FaProcedures,
+  FaShieldAlt,
+  FaUserShield,
+} from "react-icons/fa";
 
 const SkillsSection = ({ id, title, skillsData }) => {
   const categoryIcons = {
@@ -8,6 +17,10 @@ const SkillsSection = ({ id, title, skillsData }) => {
     "Cloud & DevOps": FaCloud,
     Databases: FaDatabase,
     "Frameworks & Tools": FaTools,
+    "Authentication & Authorization": FaLock,
+    "Directory Services": FaDatabase,
+    "Lifecycle Management": FaUserShield,
+    "Security & Compliance": FaShieldAlt,
   };
 
   return (

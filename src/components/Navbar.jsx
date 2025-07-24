@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaRegFileAlt } from "react-icons/fa";
 
-const Navbar = ({ title, onBack }) => {
+const Navbar = ({ title, onBack, resumeLink }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleNavClick = (e, targetId) => {
@@ -40,11 +40,20 @@ const Navbar = ({ title, onBack }) => {
           {/* Social Icons (Sticks to complete right) */}
           <div className="flex space-x-4">
             <a
+              href={resumeLink} // Replace with the actual path or URL to your SE resume
+              download
+              title="Resume"
+              className="text-white hover:text-cyan-300 transition duration-300"
+            >
+              <FaRegFileAlt size={24} />
+            </a>
+            <a
               href="https://www.linkedin.com/in/nikeshbiraggari"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin
+                title="LinkedIn"
                 className="text-white hover:text-cyan-300 transition duration-300"
                 size={24}
               />
@@ -55,12 +64,14 @@ const Navbar = ({ title, onBack }) => {
               rel="noopener noreferrer"
             >
               <IoLogoGithub
+                title="GitHub"
                 className="text-white hover:text-cyan-300 transition duration-300"
                 size={24}
               />
             </a>
             <a href="mailto:your.email@example.com">
               <FaEnvelope
+                title="Email"
                 className="text-white hover:text-cyan-300 transition duration-300"
                 size={24}
               />

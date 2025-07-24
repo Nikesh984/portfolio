@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import AboutSection from "../components/AboutSection";
 import { FaCode, FaTools, FaCogs } from "react-icons/fa";
-// import { IoLogoGithub } from "react-icons/io";
 import { SiReact } from "react-icons/si";
 import SkillsSection from "../components/SkillsSection";
 import ExperienceSection from "../components/ExperienceSection";
@@ -18,8 +17,15 @@ const IAMEngineerPage = ({ onBack }) => {
   const [modalTitle, setModalTitle] = useState("");
 
   const skillsData = {
-    "Programming Languages": {
-      skills: ["C#", "Python", "JavaScript", "PowerShell", "Bash"],
+    "Authentication & Authorization": {
+      skills: [
+        "Azure AD (Entra ID)",
+        "Single Sign-On (SSO)",
+        "MFA (including Conditional Access Policies)",
+        "OIDC",
+        "SAML",
+        "OAuth 2.0",
+      ],
     },
     "Cloud & DevOps": {
       skills: [
@@ -32,18 +38,45 @@ const IAMEngineerPage = ({ onBack }) => {
         "CI/CD",
       ],
     },
-    Databases: { skills: ["MSSQL", "MySQL", "MongoDB", "CosmosDB"] },
-    "Frameworks & Tools": {
-      skills: ["ASP.NET Core", "React JS", "Power BI", "Tableau"],
+    "IAM Tools & Platforms": {
+      skills: [
+        "SailPoint IdentityNow/IIQ",
+        "BeyondTrust Password Safe (PAM)",
+        "HashiCorp Vault (Secrets Management)",
+        "TruU (Passwordless)",
+      ],
+    },
+    "Directory Services": {
+      skills: [
+        "Active Directory",
+        "LDAP",
+        "ADFS",
+        "Group Policy",
+        "Azure AD Connect",
+      ],
+    },
+    "Lifecycle Management": {
+      skills: [
+        "Automating Joiner-Mover-Leaver workflows",
+        "Role-based access controls (RBAC)",
+        "Entitlement management",
+      ],
+    },
+    "Security & Compliance": {
+      skills: [
+        "Identity governance",
+        "Zero Trust principles",
+        "Audit & access reviews",
+      ],
     },
   };
 
   const experiences = [
     {
       id: 1,
-      title: "Software Engineer",
+      title: "Identity Access Management Engineer",
       company: "Micron Technology",
-      date: "2022 - Present",
+      date: "Feb 2022 - Aug 2023",
       responsibilities: [
         "Developed IAM solutions to secure enterprise access.",
         "Maintained internal applications with scalable systems.",
@@ -52,21 +85,9 @@ const IAMEngineerPage = ({ onBack }) => {
     },
     {
       id: 2,
-      title: "Associate Software Engineer",
-      company: "Micron Technology",
-      date: "2020 - 2022",
-      responsibilities: [
-        "Gained hands-on experience with .NET development.",
-        "Transitioned into a full-time software engineering role.",
-        "Worked on internship projects enhancing technical skills.",
-      ],
-    },
-
-    {
-      id: 3,
-      title: "Programmer Analyst",
+      title: "Software Engineer - IAM Support",
       company: "Cognizant",
-      date: "2020 - 2022",
+      date: "Oct 2020 -  Feb 2022",
       responsibilities: [
         "Gained hands-on experience with .NET development.",
         "Transitioned into a full-time software engineering role.",
@@ -78,19 +99,31 @@ const IAMEngineerPage = ({ onBack }) => {
   const projects = [
     {
       id: 1,
-      title: "Student Management System",
-      type: "coding",
-      description: "A web application to manage student records and grades.",
-      date: "2019",
-      technologies: ["JavaScript", "HTML", "CSS", "Node.js"],
+      title: "Network Structures and Cloud Computing ",
+      type: "Cloud Computing",
+      description:
+        "A scalable cloud infrastructure on Google Cloud using Terraform, planned, developed and deployed for the CSYE Network Structures and Cloud Computing course. Integrates Compute Engine, Cloud SQL, and Cloud Pub/Sub for a secure, high-availability of web application with automated deployments and robust monitoring.",
+      date: "2024",
+      technologies: [
+        "Google Cloud",
+        "Terraform",
+        "Packer",
+        "REST API's",
+        "Shell Scripting",
+        "GitHub Actions",
+        "CI/CD",
+      ],
+      githubLink: "https://github.com/Nikesh984/scalable-cloudinfra-gcp",
     },
     {
       id: 2,
-      title: "Database Optimization Project",
-      type: "database",
-      description: "Optimized SQL queries for a university database.",
-      date: "2018",
-      technologies: ["MySQL", "Python", "SQL"],
+      title: "Advanced Big Data App-Indexing",
+      type: "coding",
+      description:
+        "An advanced big data application designed to index and manage structured JSON data. Built with a RESTful API backed by Redis for fast data access, Elasticsearch for efficient search, RabbitMQ for async processing, and secured with OAuth2.0 for robust access control and data integrity.",
+      date: "2025",
+      technologies: ["dotnet", "Kafka", "Elastic Search", "Kibana"],
+      githubLink: "https://github.com/Nikesh984/INFO7255_RESTAPI",
     },
   ];
 
@@ -101,6 +134,7 @@ const IAMEngineerPage = ({ onBack }) => {
       institution: "Northeastern University",
       date: "2023 - 2025",
       highlights: [
+        "Worked as a Teaching Assistant for a core course (INFO 5100) of Information Systems program led by Professor & Director Kal Bugrara.",
         // "Graduated with Honors",
         // "Completed coursework in structural analysis",
         // "Participated in engineering design projects",
@@ -122,16 +156,17 @@ const IAMEngineerPage = ({ onBack }) => {
   const achievements = [
     {
       id: 1,
-      title: "Best Project Award",
-      description: "Received for the Student Management System project.",
-      date: "2019",
+      title: "Cultural Champion",
+      description:
+        "Received the Cultural Champion Award at Micron Technology for leading the Azure AD MFA migration project, demonstrating innovation, collaboration, and alignment with the company’s core values. Recognized by senior leadership, including the CEO.",
+      date: "2023",
     },
     {
       id: 2,
       title: "Engineering Excellence Award",
       description:
-        "Recognized for innovative database optimization techniques.",
-      date: "2018",
+        "Recognized with the Engineering Excellence Award by Novartis while working at Cognizant Technology Solutions, for outstanding contribution and commitment to delivering high-quality solutions.",
+      date: "2021",
     },
   ];
 
@@ -177,30 +212,29 @@ const IAMEngineerPage = ({ onBack }) => {
     <div className="min-h-screen bg-gray-900 text-white font-sans">
       {/* Reusable Navbar */}
       <Navbar
-        title="Nikesh's Portfolio - Software Engineering"
+        title="Nikesh's Portfolio - Identity Access Management (IAM) Engineer "
         onBack={onBack}
       />
       {/* About Me Section */}
       <main className="pt-20 container mx-auto px-6">
         <AboutSection
           id="about"
-          title="About Me as a Software Engineer"
+          title="About Me as an IAM Engineer"
           description={[
-            "I started my journey in tech with a degree in Civil Engineering, but my passion for technology quickly rerouted my path. During my internship at Cognizant, I got hands-on with .NET development, which gave me the momentum to transition into a full-time software engineering role.",
-            "After gaining solid experience, I moved to Micron Technology where I worked on Identity and Access Management (IAM) solutions — building and maintaining internal applications that secured enterprise access.",
-            "Since then, I’ve been on a mission to blend secure engineering practices with scalable software systems — and I’m just getting started.",
+            "Coming from a Civil Engineering background, I quickly transitioned into tech through an internship at Cognizant, where I got hands-on with .NET development. That experience sparked my passion for software and set me on the path to cybersecurity.",
+            "My journey truly accelerated at Micron Technology, I joined the IAM team, building and maintaining secure access systems. I worked on projects like Azure AD MFA migration, Passwordless Authentication, SailPoint, and PAM tools like BeyondTrust and HashiCorp Vault, strengthening enterprise identity workflows.",
+            "IAM isn't just my job — it’s my niche. I’m now focused on leveraging my expertise in identity security, authentication flows, and automation — with a vision to contribute to next-gen IAM solutions.",
           ]}
           techIcons={[
-            "visualstudio",
-            "dotnet",
-            "react",
-            "angular",
-            "javascript",
-            "python",
-            "sql",
-            "mongo",
-            "cosmos",
+            "azure",
+            "aws",
+            "gcloud",
+            "sailpoint",
+            "okta",
+            "vault",
+            "terraform",
             "powershell",
+            "bash",
             "postman",
             "swagger",
           ]} // Updated to match iconMap
